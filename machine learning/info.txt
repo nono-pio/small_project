@@ -1,0 +1,25 @@
+Deep learning
+
+Forward Propagation:
+Z value:
+z = w1*x1 + w2*x2 + b
+activation:
+a = sigma(z) = 1/(1+e^-z)
+
+Fonction cout:
+Log Loss:
+L = -1/m * Sum_i=1^m{ yi*log(ai) + (1-yi)log(1-ai) }
+
+Descente de Gradient:
+Wt+1 = Wt - a(dL/dWt)         a = pas d'apprentissage != activation
+
+dL/dWt = 1/m * Sum_i=1^m{ (ai-yi)xti }
+dL/db = 1/m * Sum_i=1^m{ ai-yi }
+
+Vectorisation:
+input = X     output = Y
+Z = X*W + B
+A = sigma(Z) = 1/(1+e^-Z)
+L =  -1/m * Sum_i=1^m{ yi*log(A) + (1-yi)*log(1-A) }
+W = W - a(dL/dW)      dL/dW = 1/m * XT * (A - Y)
+B = B - a(dL/dB)      dL/dB = 1/m * Sum_i=1^m{ A - Y }

@@ -1,0 +1,10 @@
+-env:
+--reset() --> state
+--play_step(action) --> new_state, recompense
+--isDone()
+--render()
+
+Autre:
+-make_action(state, Q_table, eps (exploration?))
+
+Q[state][action] = Q[state][action] learning_rate(r + gamma*Q[new_state][new_action] - Q[state][action])
